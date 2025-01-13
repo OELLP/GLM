@@ -9,7 +9,7 @@ import re
 import chardet
 
 # 检测文件编码
-with open('C:\\Users\\12433\\Desktop\\data\\data\\spam_or_not_spam\\spam_or_not_spam.csv', 'rb') as f:#读取文件路径
+with open('*******************************', 'rb') as f:#读取文件路径
     result = chardet.detect(f.read())
 encoding = result['encoding']
 
@@ -22,7 +22,7 @@ def load_data(file_path):
      print(f"文件 {file_path} 未找到，请检查路径。")
      return None
 
-file_path = 'C:\\Users\\12433\\Desktop\\data\\data\\sst2\\sst2.csv'#存贮文件路径
+file_path = '*******************************'#存贮文件路径
 data = load_data(file_path)
 
 if data is not None:
@@ -81,7 +81,7 @@ if data is not None:
 
      features_df = pd.DataFrame(combined_features.toarray(), columns=feature_names)
      features_df['label'] = labels
-     output_path = 'C:\\Users\\12433\\Desktop\\data\\data\\sst2\\特征.csv'
+     output_path = '********************************'
      features_df.to_csv(output_path, index=False)
      print(f"特征提取完成，结果已保存到 {output_path}")
 
