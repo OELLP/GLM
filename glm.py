@@ -13,14 +13,14 @@ def read_csv(file_path: str) -> list:
     df_list = df.values.tolist()
     return df_list
 
-with open('C:\\Users\\12433\\Desktop\\data\\data\\spam_or_not_spam\\spam_or_not_spam.csv', 'rb') as f:#读取文件路径
+with open('****************', 'rb') as f:#读取文件路径
     result = chardet.detect(f.read())
 encoding = result['encoding']
 
 if __name__ == "__main__":
-    client = ZhipuAI(api_key="fa40780b56f34fa2ba2fa99f4f233ab2.pX1DXe60efQ6rVf9")
+    client = ZhipuAI(api_key="****************")#输入API
     # 读取实验数据
-    file_path = 'C:\\Users\\12433\\Desktop\\data\\data\\spam_or_not_spam\\spam_or_not_spam.csv'
+    file_path = '****************'#文件路径
     data_list = read_csv(file_path=file_path)
 
     # 设置prompt
@@ -46,7 +46,7 @@ if __name__ == "__main__":
             result = response.choices[0].message.content
             file.write(result + '\n')
             print(f"{result}")
-a = read_csv('C:\\Users\\12433\\Desktop\\data\\data\\spam_or_not_spam\\spam_or_not_spam.csv')
+a = read_csv('**************')#文件路径
 b = [row[1] for row in a]
 c = []
 with open('data.txt','r') as file:
